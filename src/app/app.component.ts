@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import {random} from 'lodash';
+
+declare var _: any;
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angularTest';
+  cartItems: any = ["Apple","Mango","Banana"];
+
+  newItemAdded(newItem){
+    if(newItem!=''){
+      this.cartItems.push(newItem);
+    }
+  }
 }
