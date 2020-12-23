@@ -1,0 +1,15 @@
+<div style="margin-top:10px;">
+    <input type="text" [(ngModel)]="item">
+    <button style="margin-left:10px;" class='btn btn-sm' [ngClass]="{'btn-primary':item!='','btn-warning':item==''}" (click)="addItem()">Add Item</button>
+</div>
+<div>
+    <label *ngIf="item==''">Please enter an item to add to cart</label>
+</div>
+<div>
+    <ul class="list-group">
+        <li 
+        class="list-group-item" 
+        *ngFor="let x of items; let i = index"
+        [ngStyle]="{background:i%2==0? 'lightgrey':'purple'}">{{i}} - {{x}}</li>
+    </ul>
+</div>

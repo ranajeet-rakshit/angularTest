@@ -1,0 +1,14 @@
+<div>
+    <ul class="nav nav-tabs">
+        <li class="nav-item" [ngClass]="{active: chosenSide=='all'}">
+          <a class="nav-link" (click)="chosenSide='all'">All</a>
+        </li>
+        <li class="nav-item" [ngClass]="{active: chosenSide=='dark'}">
+          <a class="nav-link" (click)="chosenSide='dark'">Dark</a>
+        </li>
+        <li class="nav-item" [ngClass]="{active: chosenSide=='light'}">
+          <a class="nav-link" (click)="chosenSide='light'">Light</a>
+        </li>
+      </ul>
+      <app-list [charecters]="getCharecter()" (sideAssigned)="sideAssigned($event)"></app-list>
+</div>
