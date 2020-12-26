@@ -1,8 +1,4 @@
 import { Component } from '@angular/core';
-import {random} from 'lodash';
-
-declare var _: any;
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

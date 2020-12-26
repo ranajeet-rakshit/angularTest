@@ -8,6 +8,9 @@ import { CartComponent } from './cart/cart.component';
 import { TabComponent } from './tab/tab.component';
 import { ListComponent } from './list/list.component';
 import { ItemComponent } from './item/item.component';
+import { StarWarService } from './star-wars.service';
+import { LoggerService } from './logger.service';
+import { CreateCharecterComponent } from './create-charecter/create-charecter.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +19,14 @@ import { ItemComponent } from './item/item.component';
     CartComponent,
     TabComponent,
     ListComponent,
-    ItemComponent
+    ItemComponent,
+    CreateCharecterComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [StarWarService, LoggerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
