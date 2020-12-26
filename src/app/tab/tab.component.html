@@ -1,13 +1,13 @@
 <div>
     <ul class="nav nav-tabs">
-        <li class="nav-item" [ngClass]="{active: chosenSide=='all'}">
-          <a class="nav-link" (click)="chosenSide='all'">All</a>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive='active' routerLink="/charecters/all">All</a>
         </li>
-        <li class="nav-item" [ngClass]="{active: chosenSide=='dark'}">
-          <a class="nav-link" (click)="chosenSide='dark'">Dark</a>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive='active' routerLink="/charecters/dark">Dark</a>
         </li>
-        <li class="nav-item" [ngClass]="{active: chosenSide=='light'}">
-          <a class="nav-link" (click)="chosenSide='light'">Light</a>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive='active' routerLink="/charecters/light">Light</a>
         </li>
       </ul>
       <app-list [charecters]="getCharecter()"></app-list>
