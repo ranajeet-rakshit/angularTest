@@ -13,6 +13,7 @@ import { LoggerService } from './logger.service';
 import { CreateCharecterComponent } from './create-charecter/create-charecter.component';
 import { HeaderComponent } from './header/header.component';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes = [
   {path:'charecters', component: TabComponent, children:[
@@ -20,7 +21,7 @@ const routes = [
     {path:':side', component: ListComponent}
   ]},
   {path:'new-charecter', component: CreateCharecterComponent},
-  {path:'**', redirectTo:'/charecters'}
+  {path:'**', redirectTo:'charecters'}
 ];
 
 @NgModule({
@@ -37,7 +38,8 @@ const routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
   providers: [StarWarService, LoggerService],
   bootstrap: [AppComponent]
